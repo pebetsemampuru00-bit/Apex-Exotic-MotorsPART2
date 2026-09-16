@@ -1,0 +1,642 @@
+/* CSS RESET
+   Resets default browser styles to ensure consistency across
+   different browsers. This is a simple reset that removes
+   default margin, padding, and sets box-sizing to border-box.*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DEFAULT STYLES (BASE STYLES)
+   These are the default styles applied to the entire website.
+   They set the font family, colour scheme, margins, and padding
+   for all elements. This creates a consistent look and feel.*/
+   
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* TYPOGRAPHY STYLES
+   These styles control the appearance of text elements.
+   They set font sizes, weights, and spacing for headings
+   and paragraphs to create a clear visual hierarchy.*/
+    
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 15px;
+    letter-spacing: 0.3px;
+}
+
+/*HEADER AND NAVIGATION STYLES
+   Styles for the header, logo, and navigation menu.
+   The navigation is displayed horizontally using flexbox.*/
+ 
+header {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#logo h1 {
+    color: #ffffff;
+}
+
+#logo p {
+    color: #cccccc;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Pseudo-classes: Hover effect for navigation links */
+nav a:hover {
+    background-color: #c9a84c;
+    color: #1a1a1a;
+}
+
+/* Pseudo-classes: Focus effect for accessibility */
+nav a:focus {
+    outline: 2px solid #c9a84c;
+    outline-offset: 2px;
+}
+
+/* Pseudo-classes: Active effect when clicked */
+nav a:active {
+    background-color: #a88a3a;
+    color: #ffffff;
+}
+
+/* LAYOUT STRUCTURE (CSS GRID / FLEXBOX)
+   Uses CSS Grid and Flexbox to create a responsive layout.
+   The main content is structured using sections that will
+   be styled with grid or flexbox for desktop.*/
+   
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Each section is displayed as a block with spacing */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+/* VISUAL STYLES
+   Styles for colours, backgrounds, borders, and shadows.
+   These add visual appeal and make the website look professional.*/
+   
+
+/* Hero banner specific styles */
+#hero-banner {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#hero-banner h2 {
+    color: #ffffff;
+}
+
+#hero-banner p {
+    color: #cccccc;
+}
+
+#hero-banner a {
+    display: inline-block;
+    background-color: #c9a84c;
+    color: #1a1a1a;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #c9a84c;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Pseudo-class: Hover effect for call-to-action button */
+#hero-banner a:hover {
+    background-color: #1a1a1a;
+    color: #c9a84c;
+    border-color: #c9a84c;
+}
+
+/* Featured brands: logos displayed in a grid */
+#featured-brands ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+#featured-brands ul li {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudo-class: Hover effect for brand logos */
+#featured-brands ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Collection section: uses flexbox for layout */
+#collection ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+#collection ul li {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudo-class: Hover effect for collection items */
+#collection ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#collection ul li img {
+    border-radius: 6px;
+}
+
+/*TABLE STYLES
+   Styles for comparison table and business hours table. */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tr:hover {
+    background-color: #f5f0e8;
+}
+
+/*FORM STYLES
+   Styles for enquiry and contact forms. */
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudo-class: Focus effect for form inputs */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #c9a84c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+}
+
+input[type="submit"] {
+    background-color: #c9a84c;
+    color: #1a1a1a;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 15px;
+}
+
+/* Pseudo-class: Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #1a1a1a;
+    color: #c9a84c;
+}
+
+/*SOCIAL MEDIA STYLES */
+
+#social-media ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#social-media ul li a {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Pseudo-class: Hover effect for social media links */
+#social-media ul li a:hover {
+    background-color: #c9a84c;
+    color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+/* FOOTER STYLES */
+
+footer {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #cccccc;
+    margin-bottom: 5px;
+}
+
+/* IFrame (Map) STYLES */
+    
+
+#map-location iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   These styles adapt the website for different screen sizes.
+   Breakpoints: Tablet (768px and below), Mobile (480px and below)
+   
+
+/* TABLET BREAKPOINT (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Typography adjustments for tablet */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    /* Navigation adjustments for tablet - more compact */
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Collection - switch to 2 columns */
+    #collection ul li {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    /* Layout adjustments: make content more readable */
+    section {
+        padding: 15px;
+    }
+
+    /* Form adjustments */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    /* Social media links wrap nicely */
+    #social-media ul {
+        gap: 10px;
+    }
+
+    #social-media ul li a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* MOBILE BREAKPOINT (max-width: 480px) */
+@media (max-width: 480px) {
+
+    /* Typography adjustments for mobile - smaller text */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 12px;
+        text-align: center;
+    }
+
+    /* Navigation adjustments for mobile - stack vertically or wrap */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    /* Layout adjustments - single column for mobile */
+    #collection ul li {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* Featured brands - smaller logos */
+    #featured-brands ul li img {
+        width: 60px !important;
+        height: 50px !important;
+    }
+
+    /* Form adjustments - full width */
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Table adjustments - smaller text */
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 6px 10px;
+    }
+
+    /* Social media - stack vertically */
+    #social-media ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #social-media ul li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Map iframe adjusts */
+    #map-location iframe {
+        height: 250px;
+    }
+
+    /* Image adjustments - scale down for mobile */
+    #hero-banner img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #about-intro img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #founder img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Hero banner padding */
+    #hero-banner {
+        padding: 20px 10px;
+    }
+
+    #hero-banner a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+/* PRODUCT CARDS (for products.html)
+   Matches the homepage collection style*/
+  
+
+#supercars ul,
+#luxury-suvs ul,
+#executive-cars ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+#supercars ul li,
+#luxury-suvs ul li,
+#executive-cars ul li {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER effect - matches homepage */
+#supercars ul li:hover,
+#luxury-suvs ul li:hover,
+#executive-cars ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#supercars ul li img,
+#luxury-suvs ul li img,
+#executive-cars ul li img {
+    border-radius: 6px;
+}
+
+#supercars ul li h3,
+#luxury-suvs ul li h3,
+#executive-cars ul li h3 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#supercars ul li p,
+#luxury-suvs ul li p,
+#executive-cars ul li p {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-bottom: 0;
+}
+/* Logo link hover effect */
+#logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo a:hover h1 {
+    color: #c9a84c;
+}
+
+/* Logo link hover effect */
+#logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo a:hover h1 {
+    color: #c9a84c;
+}
