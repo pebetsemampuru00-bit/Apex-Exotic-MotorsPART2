@@ -49,7 +49,8 @@ Apex Exotic Motors is a luxury vehicle dealership website developed for the WEDE
 | **Social Media** | Links to Instagram, TikTok, YouTube, LinkedIn, WhatsApp |
 | **Responsive Design** | Adapts to desktop, tablet, and mobile screens |
 
----Apex Exotic Motors Website
+---
+Apex Exotic Motors Website
 │
 ├── index.html (Home)
 │ ├── Hero Banner
