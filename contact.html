@@ -4,18 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Exotic Motors | Contact - Visit Our Showrooms</title>
-    <!-- Part 2: External CSS linked to all pages -->
+    <title>Apex Exotic Motors | Contact Us - Visit Our Showrooms</title>
+    <meta name="description" content="Contact Apex Exotic Motors at our Sandton, Johannesburg or Polokwane showrooms. View business hours and find us on the map.">
+    <meta name="keywords" content="contact Apex Exotic Motors, car dealership contact, Sandton showroom, Polokwane showroom">
+    <meta name="author" content="Makgatspepe Mampuru">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
 
-    <!-- HEADER WITH LOGO AND NAVIGATION -->
-    <!-- Fixed Part 1: Removed target="_blank" from internal links -->
+    <!-- Header -->
     <header>
         <div id="logo">
-            <h1>Apex Exotic Motors</h1>
+            <a href="index.html">
+                <h1>Apex Exotic Motors</h1>
+            </a>
             <p>Where luxury, performance, and prestige come together.</p>
         </div>
         <nav>
@@ -27,15 +31,14 @@
         </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
 
-        <!-- VISIT OUR SHOWROOMS -->
+        <!-- Showrooms -->
         <section id="showrooms">
             <h2>Visit Our Showrooms</h2>
 
             <div id="jhb-showroom">
-                <img src="images/3.jpeg" alt="Apex Exotic Motors showroom in Sandton, Johannesburg">
+                <img src="images/3.jpeg" alt="Apex Exotic Motors showroom in Sandton, Johannesburg" class="gallery-item">
                 <h3>Johannesburg Showroom</h3>
                 <p><strong>Location:</strong> Sandton, Johannesburg</p>
                 <p><strong>Phone:</strong> +27 11 123 4567</p>
@@ -45,7 +48,7 @@
             <br>
 
             <div id="polo-showroom">
-                <img src="images/2.jpeg" alt="Apex Exotic Motors showroom in Polokwane">
+                <img src="images/2.jpeg" alt="Apex Exotic Motors showroom in Polokwane" class="gallery-item">
                 <h3>Polokwane Showroom</h3>
                 <p><strong>Location:</strong> CBD, Polokwane</p>
                 <p><strong>Phone:</strong> +27 15 123 4567</p>
@@ -53,54 +56,33 @@
             </div>
         </section>
 
-        <!-- BUSINESS HOURS -->
+        <!-- Business hours -->
         <section id="business-hours">
             <h2>Business Hours</h2>
             <table border="1">
                 <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Hours</th>
-                    </tr>
+                    <tr><th>Day</th><th>Hours</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday - Friday</td>
-                        <td>09:00 - 18:00</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>09:00 - 15:00</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Closed</td>
-                    </tr>
-                    <tr>
-                        <td>Public Holidays</td>
-                        <td>Closed</td>
-                    </tr>
+                    <tr><td>Monday - Friday</td><td>09:00 - 18:00</td></tr>
+                    <tr><td>Saturday</td><td>09:00 - 15:00</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                    <tr><td>Public Holidays</td><td>Closed</td></tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- MAP LOCATION -->
+        <!-- Leaflet map -->
         <section id="map-location">
             <h2>Find Us</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14356.258319573068!2d28.0476!3d-26.1076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d10e3d2a0d1%3A0x5f8c9c6f9f3e5f0f!2sSandton%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1700000000000" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+            <div id="map" style="height: 450px; border-radius: 8px;"></div>
         </section>
 
-        <!-- CONTACT FORM -->
+        <!-- Contact form -->
         <section id="contact-form-section">
             <h2>Get In Touch</h2>
-            <form action="#" method="post">
+
+            <form id="contactForm" action="#" method="post">
 
                 <label for="contact-name">Full Name:</label>
                 <input type="text" id="contact-name" name="contact-name" required>
@@ -111,7 +93,7 @@
                 <br><br>
 
                 <label for="contact-phone">Phone:</label>
-                <input type="tel" id="contact-phone" name="contact-phone" required>
+                <input type="tel" id="contact-phone" name="contact-phone" placeholder="e.g. 0821234567" required>
                 <br><br>
 
                 <label for="message-type">Message Type:</label>
@@ -132,57 +114,33 @@
                 <input type="submit" value="Send Message">
 
             </form>
+
+            <!-- Response box -->
+            <div id="contactResponse" class="form-response" style="display:none;"></div>
+
         </section>
 
-        <!-- SOCIAL MEDIA -->
+        <!-- Social media -->
         <section id="social-media">
             <h2>Follow Apex Exotic Motors</h2>
             <ul>
-                <li>
-                    <a href="https://www.instagram.com/sa_exotics/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@n2autosandton"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        TikTok
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/@carscoza"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        YouTube
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/company/scuderia-south-africa/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href="https://whatsapp.com/channel/0029VbDecRi30LKGhtcEcs2C"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        WhatsApp
-                    </a>
-                </li>
+                <li><a href="https://www.instagram.com/sa_exotics/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@n2autosandton" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                <li><a href="https://www.youtube.com/@carscoza" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/company/scuderia-south-africa/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://whatsapp.com/channel/0029VbDecRi30LKGhtcEcs2C" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
             </ul>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Apex Exotic Motors. All rights reserved.</p>
         <p>Showrooms in Polokwane and Johannesburg</p>
     </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
